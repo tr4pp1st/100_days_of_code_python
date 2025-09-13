@@ -20,23 +20,23 @@ print("Welcome to Treasure Island!")
 print("Your mission is to find the treasure.")
 
 print("You are at a cross road. Where do you want to go?")
-choice1 = input("Type \"left\" or \"right\":\n")
+choice1 = input("Type \"left\" or \"right\":\n").lower()
 
-if choice1.lower() != "left":
+if choice1 != "left":
     game_over("Fall into a hole.")
 else:
     print("You come to a lake. Do you want to wait for the boat or swim?")
-    choice2 = input("Type \"wait\" or \"swim\":\n")
-    if choice2.lower() != "wait":
+    choice2 = input("Type \"wait\" or \"swim\":\n").lower()
+    if choice2 != "wait":
         game_over("Attacked by trout.")
     else:
         print("You come to a house with three doors. Which door do you want to go into?")
-        choice3 = input("Type \"red\", \"blue\" or \"yellow\":\n")
-        if choice3.lower() == "red":
+        choice3 = input("Type \"red\", \"blue\" or \"yellow\":\n").lower()
+        if choice3 == "red":
             game_over("Burned by fire.")
-        elif choice3.lower() == "blue":
+        elif choice3 == "blue":
             game_over("Eaten by beasts.")
-        elif choice3.lower() != "yellow":
+        elif choice3 != "yellow":
             game_over("")
         else:
             print("You Win!")
